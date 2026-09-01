@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hotel Star Villa | New Delhi</title>
+<meta name="description" content="Hotel Star Villa in Paharganj, New Delhi. Comfortable rooms, convenient location and friendly hospitality.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #fffaf2;
+    color: #2b201d;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* TOP BAR */
+.topbar {
+    background: #390b07;
+    color: #f1d18b;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 11px;
+    letter-spacing: .5px;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 25px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.7),
+        transparent
+    );
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.crest {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #e4ae42;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #e4ae42;
+    font: 700 34px "Cormorant Garamond";
+}
+
+.logo-text small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.logo-text strong {
+    display: block;
+    font: 700 28px "Cormorant Garamond";
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #e5ae40;
+}
+
+.book-btn {
+    background: #e3ad3e;
+    color: #25160e;
+    padding: 12px 17px;
+    border-radius: 3px;
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: none;
+    color: white;
+    font-size: 27px;
+}
+
+/* HERO */
+.hero {
+    min-height: 760px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    /* YOUR HOTEL PHOTO */
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(24,4,2,.92),
+            rgba(40,8,4,.65) 45%,
+            rgba(0,0,0,.18)
+        ),
+        url("hotel-front.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    margin-left: 7%;
+    margin-top: 55px;
+    max-width: 610px;
+}
+
+.eyebrow {
+    color: #e7b03f;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.script {
+    margin-top: 20px;
+    font: italic 26px "Cormorant Garamond";
+}
+
+.hero h1 {
+    margin: 5px 0 20px;
+    font: 700 70px/.84 "Cormorant Garamond";
+    letter-spacing: 1px;
+}
+
+.hero h1 em {
+    color: #e6ae3d;
+    font-style: normal;
+}
+
+.hero-description {
+    max-width: 500px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #eee;
+}
+
+.hero-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.hero-info div {
+    font-size: 18px;
+    color: #e5ad3d;
+}
+
+.hero-info b {
+    font-size: 13px;
+}
+
+.hero-info small {
+    display: block;
+    margin-left: 22px;
+    color: #ddd;
+    font-size: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.gold {
+    background: #e3ad3e;
+    color: #25160e;
+    padding: 13px 20px;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+.outline {
+    border: 1px solid #e3bd68;
+    color: white;
+    padding: 12px 20px;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+/* RATING */
+.rating {
+    position: absolute;
+    right: 8%;
+    top: 205px;
+    z-index: 5;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #e4ad3d;
+    border-radius: 50%;
+    background: rgba(50,10,5,.72);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e6b040;
+}
+
+.rating strong {
+    font: 700 38px "Cormorant Garamond";
+}
+
+.rating span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.rating small {
+    font-size: 8px;
+}
+
+/* BOOKING BOX */
+.booking {
+    width: 84%;
+    margin: -55px auto 0;
+    position: relative;
+    z-index: 20;
+    background: white;
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.18);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1fr;
+}
+
+.booking-item {
+    padding: 8px 20px;
+    border-right: 1px solid #eee;
+}
+
+.booking-item label {
+    display: block;
+    color: #9b712c;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.booking-item b {
+    font-size: 12px;
+}
+
+.booking-action {
+    margin: 4px;
+    background: #4a110b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+/* FEATURES */
+.features {
+    background: #fff3e3;
+    padding: 28px 6%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.feature {
+    text-align: center;
+    border-right: 1px solid #e4d3b9;
+    color: #6c2518;
+    padding: 5px;
+}
+
+.feature:last-child {
+    border: 0;
+}
+
+.feature-icon {
+    font-size: 23px;
+}
+
+.feature b {
+    display: block;
+    font-size: 10px;
+    color: #302522;
+    margin-top: 5px;
+}
+
+.feature small {
+    display: block;
+    font-size: 8px;
+    color: #777;
+}
+
+/* GENERAL SECTION */
+.section {
+    padding: 75px 7%;
+}
+
+.section-title span {
+    font: 700 12px "Cormorant Garamond";
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font: 700 46px "Cormorant Garamond";
+    margin: 5px 0 30px;
+}
+
+.section-title em {
+    color: #b8781d;
+}
+
+/* ROOMS */
+.rooms {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.room {
+    background: white;
+    border: 1px solid #eadfd0;
+    box-shadow: 0 7px 20px rgba(50,20,5,.08);
+    transition: .3s;
+}
+
+.room:hover {
+    transform: translateY(-8px);
+}
+
+.room-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.room1 {
+    background-image: url("https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1000&q=85");
+}
+
+.room2 {
+    background-image: url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85");
+}
+
+.room3 {
+    background-image: url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85");
+}
+
+.room-body {
+    padding: 18px;
+}
+
+.room-body h3 {
+    font: 700 20px "Cormorant Garamond";
+}
+
+.price {
+    float: right;
+    color: #a84d22;
+    font-size: 16px;
+}
+
+.room-body p {
+    margin: 12px 0;
+    font-size: 9px;
+    color: #777;
+}
+
+.details {
+    border: 0;
+    background: #e3ad3e;
+    padding: 9px 13px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+/* GALLERY */
+.gallery {
+    background: #fff8ed;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 10px;
+}
+
+.gallery-item {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item:first-child {
+    grid-row: span 2;
+}
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 50%,
+        rgba(0,0,0,.65)
+    );
+}
+
+.gallery-item span {
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    z-index: 2;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.g1 {
+    background-image: url("hotel-front.jpg");
+}
+
+.g2 {
+    background-image: url("https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=85");
+}
+
+.g3 {
+    background-image: url("https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=85");
+}
+
+.g4 {
+    background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85");
+}
+
+.g5 {
+    background-image: url("https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=85");
+}
+
+/* AMENITIES */
+.amenities {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.amenity {
+    background: white;
+    padding: 25px 15px;
+    text-align: center;
+    border: 1px solid #eadfd0;
+    transition: .3s;
+}
+
+.amenity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #0001;
+}
+
+.amenity div {
+    font-size: 28px;
+    color: #b57a20;
+}
+
+.amenity h3 {
+    margin-top: 10px;
+    font: 600 20px "Cormorant Garamond";
+}
+
+/* REVIEWS */
+.reviews {
+    background: #f5eadb;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.review {
+    background: white;
+    padding: 30px;
+    border: 1px solid #eadcca;
+}
+
+.review h3 {
+    text-align: center;
+    font: 600 24px "Cormorant Garamond";
+    color: #651b12;
+}
+
+.stars {
+    text-align: center;
+    color: #d79b27;
+    margin: 12px;
+    letter-spacing: 3px;
+}
+
+.review p {
+    color: #666;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* LOCATION */
+.location {
+    background: #3a0d08;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+}
+
+.location-info,
+.contact {
+    padding: 45px;
+}
+
+.location h3 {
+    color: #e6ae3d;
+    font: 600 21px "Cormorant Garamond";
+    margin-bottom: 15px;
+}
+
+.location p {
+    font-size: 10px;
+    line-height: 1.8;
+    color: #ddceca;
+}
+
+.map {
+    min-height: 360px;
+    background:
+        linear-gradient(135deg,#ddd4c4,#c8bba5);
+    position: relative;
+    display: grid;
+    place-items: center;
+    color: #582e24;
+}
+
+.map-marker {
+    font-size: 50px;
+    color: #a92d20;
+}
+
+/* FOOTER */
+footer {
+    background: #250503;
+    color: white;
+    padding: 45px 7% 20px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.4fr 1fr;
+    gap: 30px;
+}
+
+footer h4 {
+    color: #e5ae3d;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+footer p,
+footer a {
+    color: #b9aaa5;
+    display: block;
+    font-size: 9px;
+    margin: 8px 0;
+}
+
+.copyright {
+    grid-column: 1/-1;
+    border-top: 1px solid #54231c;
+    padding-top: 15px;
+    text-align: center;
+    color: #88736e;
+    font-size: 8px;
+}
+
+/* MOBILE */
+@media(max-width:900px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 5%;
+        right: 5%;
+        background: #390b07;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        min-height: 760px;
+    }
+
+    .hero-content {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .rating {
+        top: 130px;
+        right: 5%;
+        transform: scale(.75);
+    }
+
+    .booking {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-item {
+        border-right: 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .booking-action {
+        min-height: 50px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .rooms {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .amenities {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .location {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:600px) {
+
+    .topbar {
+        font-size: 7px;
+    }
+
+    header {
+        padding: 18px 5%;
+    }
+
+    .logo-text strong {
+        font-size: 22px;
+    }
+
+    .hero {
+        min-height: 780px;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-description {
+        font-size: 11px;
+    }
+
+    .hero-info {
+        gap: 10px;
+    }
+
+    .rooms {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px 180px;
+    }
+
+    .gallery-item:first-child {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .copyright {
+        grid-column: 1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <span>⌖ Paharganj, New Delhi</span>
+    <span>☎ 088004 23344</span>
+    <span>◷ Check-in 12:00 PM · Check-out 12:00 PM</span>
+</div>
+
+<!-- HEADER -->
+<header>
+
+    <a href="#home" class="logo">
+        <div class="crest">S</div>
+
+        <div class="logo-text">
+            <small>HOTEL</small>
+            <strong>STAR VILLA</strong>
+            <span>होटल स्टार विला</span>
+        </div>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#gallery">Photos</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+        <a class="book-btn" href="tel:08800423344">
+            Check Availability
+        </a>
+    </nav>
+
+</header>
+
+<!-- HERO / FRONT PAGE -->
+<section class="hero" id="home">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            ✦ 3-STAR HOTEL · NEW DELHI
+        </div>
+
+        <p class="script">
+            Comfortable Stay in
+        </p>
+
+        <h1>
+            THE HEART OF<br>
+            <em>NEW DELHI</em>
+        </h1>
+
+        <p class="hero-description">
+            Clean rooms, great hospitality and a convenient
+            location near New Delhi Railway Station.
+        </p>
+
+        <div class="hero-info">
+
+            <div>
+                ★ <b>4.3</b>
+                <small>1,278 Reviews</small>
+            </div>
+
+            <div>
+                ◷ <b>12:00 PM</b>
+                <small>Check-in / Check-out</small>
+            </div>
+
+            <div>
+                ♡ <b>Friendly</b>
+                <small>LGBTQ+ Friendly</small>
+            </div>
+
+            <div>
+                ♧ <b>Clean</b>
+                <small>Hygienic Rooms</small>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <a class="gold" href="tel:08800423344">
+                CALL / BOOK
+            </a>
+
+            <a class="outline"
+               target="_blank"
+               href="https://www.google.com/maps/place/Hotel+Star+Villa/@28.6421829,77.2151787,17z/">
+                DIRECTIONS ↗
+            </a>
+        </div>
+
+    </div>
+
+    <div class="rating">
+        <strong>4.3</strong>
+        <span>★★★★★</span>
+        <small>1,278 Reviews</small>
+    </div>
+
+</section>
+
+<!-- BOOKING -->
+<div class="booking">
+
+    <div class="booking-item">
+        <label>CHECK IN</label>
+        <b>Tue, Sep 1</b>
+    </div>
+
+    <div class="booking-item">
+        <label>CHECK OUT</label>
+        <b>Wed, Sep 2</b>
+    </div>
+
+    <div class="booking-item">
+        <label>GUESTS & ROOMS</label>
+        <b>2 Guests · 1 Room</b>
+    </div>
+
+    <a class="booking-action" href="tel:08800423344">
+        CHECK AVAILABILITY →
+    </a>
+
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="feature">
+        <div class="feature-icon">◷</div>
+        <b>Check-in / Check-out</b>
+        <small>12:00 PM – 12:00 PM</small>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">♡</div>
+        <b>LGBTQ+ Friendly</b>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">♧</div>
+        <b>Clean Rooms</b>
+        <small>Hygienic environment</small>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">▣</div>
+        <b>Near Railway Station</b>
+        <small>New Delhi Station</small>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">⌖</div>
+        <b>Great Location</b>
+        <small>Paharganj</small>
+    </div>
+
+</section>
+
+<!-- ROOMS -->
+<section class="section" id="rooms">
+
+    <div class="section-title">
+        <span>OUR ROOMS</span>
+        <h2>
+            Comfort for every <em>traveler.</em>
+        </h2>
+    </div>
+
+    <div class="rooms">
+
+        <article class="room">
+
+            <div class="room-image room1"></div>
+
+            <div class="room-body">
+
+                <h3>
+                    DELUXE ROOM
+                    <span class="price">₹1,619</span>
+                </h3>
+
+                <p>
+                    ♙ 2 Guests · ▣ 1 King Bed ·
+                    ⌁ Free Wi-Fi
+                </p>
+
+                <button class="details">
+                    VIEW DETAILS
+                </button>
+
+            </div>
+
+        </article>
+
+        <article class="room">
+
+            <div class="room-image room2"></div>
+
+            <div class="room-body">
+
+                <h3>
+                    SUPER DELUXE
+                    <span class="price">₹1,896</span>
+                </h3>
+
+                <p>
+                    ♙ 2 Guests · ▣ 1 King Bed ·
+                    ⌁ Free Wi-Fi
+                </p>
+
+                <button class="details">
+                    VIEW DETAILS
+                </button>
+
+            </div>
+
+        </article>
+
+        <article class="room">
+
+            <div class="room-image room3"></div>
+
+            <div class="room-body">
+
+                <h3>
+                    FAMILY ROOM
+                    <span class="price">₹2,564</span>
+                </h3>
+
+                <p>
+                    ♙ 4 Guests · ▣ 2 Beds ·
+                    ⌁ Free Wi-Fi
+                </p>
+
+                <button class="details">
+                    VIEW DETAILS
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- AMENITIES -->
+<section class="section" id="amenities">
+
+    <div class="section-title">
+        <span>HOTEL AMENITIES</span>
+        <h2>
+            Everything you need for a <em>comfortable stay.</em>
+        </h2>
+    </div>
+
+    <div class="amenities">
+
+        <div class="amenity">
+            <div>♧</div>
+            <h3>Clean Rooms</h3>
+        </div>
+
+        <div class="amenity">
+            <div>⌁</div>
+            <h3>Free Wi-Fi</h3>
+        </div>
+
+        <div class="amenity">
+            <div>▣</div>
+            <h3>Comfortable Beds</h3>
+        </div>
+
+        <div class="amenity">
+            <div>☎</div>
+            <h3>24/7 Assistance</h3>
+        </div>
+
+        <div class="amenity">
+            <div>⌖</div>
+            <h3>Great Location</h3>
+        </div>
+
+        <div class="amenity">
+            <div>♡</div>
+            <h3>LGBTQ+ Friendly</h3>
+        </div>
+
+        <div class="amenity">
+            <div>✦</div>
+            <h3>Housekeeping</h3>
+        </div>
+
+        <div class="amenity">
+            <div>🚉</div>
+            <h3>Near Railway Station</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery" id="gallery">
+
+    <div class="section-title">
+        <span>PHOTOS & VIDEOS</span>
+        <h2>
+            A glimpse of <em>Star Villa.</em>
+        </h2>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item g1">
+            <span>HOTEL EXTERIOR</span>
+        </div>
+
+        <div class="gallery-item g2">
+            <span>ROOMS</span>
+        </div>
+
+        <div class="gallery-item g3">
+            <span>INTERIOR</span>
+        </div>
+
+        <div class="gallery-item g4">
+            <span>FOOD & DRINK</span>
+        </div>
+
+        <div class="gallery-item g5">
+            <span>VISITOR PHOTOS</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+
+    <div class="review">
+
+        <h3>VISITOR FEEDBACK</h3>
+
+        <div class="stars">
+            ★★★★★
+        </div>
+
+        <p>
+            A visitor update reported concerns regarding
+            room condition, cleanliness, accessibility,
+            kitchen facilities and staff conduct.
+        </p>
+
+        <br>
+
+        <small>
+            Visitor update · 10 months ago
+        </small>
+
+    </div>
+
+    <div class="review">
+
+        <h3>FROM THE OWNER</h3>
+
+        <div class="stars">
+            ★
+        </div>
+
+        <p>
+            Looking for a comfortable and convenient stay
+            in New Delhi? Hotel Star Villa is perfectly
+            situated in Paharganj, just minutes away from
+            New Delhi Railway Station.
+        </p>
+
+        <br>
+
+        <p>
+            We pride ourselves on maintaining high
+            standards of cleanliness and hygiene across
+            our rooms.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+
+    <div class="location-info">
+
+        <h3>⌖ LOCATION</h3>
+
+        <p>
+            <strong>Hotel Star Villa</strong>
+        </p>
+
+        <p>
+            98–99, Krishna Gali,<br>
+            Main Bazar, Kaseru Walan,<br>
+            Paharganj,<br>
+            New Delhi, Delhi, 110055
+        </p>
+
+        <br>
+
+        <p>
+            Neighborhood: Paharganj
+        </p>
+
+        <br>
+
+        <a class="gold"
+           target="_blank"
+           href="https://www.google.com/maps/place/Hotel+Star+Villa/@28.6421829,77.2151787,17z/">
+            GET DIRECTIONS
+        </a>
+
+    </div>
+
+    <div class="map">
+
+        <div class="map-marker">
+            ●
+        </div>
+
+        <b>
+            HOTEL STAR VILLA
+        </b>
+
+    </div>
+
+    <div class="contact" id="contact">
+
+        <h3>☎ CONTACT US</h3>
+
+        <p>
+            <strong>088004 23344</strong>
+        </p>
+
+        <br>
+
+        <p>
+            Check-in: 12:00 PM
+        </p>
+
+        <p>
+            Check-out: 12:00 PM
+        </p>
+
+        <br>
+
+        <a class="gold" href="tel:08800423344">
+            CALL NOW
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div>
+
+        <div class="logo">
+
+            <div class="crest">S</div>
+
+            <div class="logo-text">
+                <small>HOTEL</small>
+                <strong>STAR VILLA</strong>
+                <span>होटल स्टार विला</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <h4>QUICK LINKS</h4>
+
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#gallery">Photos</a>
+        <a href="#location">Location</a>
+
+    </div>
+
+    <div>
+
+        <h4>HOTEL INFORMATION</h4>
+
+        <p>✓ 3-Star Hotel</p>
+        <p>✓ Check-in: 12:00 PM</p>
+        <p>✓ Check-out: 12:00 PM</p>
+        <p>✓ LGBTQ+ Friendly</p>
+        <p>✓ Clean & Hygienic Rooms</p>
+
+    </div>
+
+    <div>
+
+        <h4>CONTACT</h4>
+
+        <p>☎ 088004 23344</p>
+
+        <p>
+            Paharganj,<br>
+            New Delhi, India
+        </p>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Hotel Star Villa. All Rights Reserved.
+    </div>
+
+</footer>
+
+<script>
+
+function toggleMenu() {
+
+    document
+        .getElementById("nav")
+        .classList
+        .toggle("open");
+
+}
+
+document
+    .querySelectorAll("nav a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .getElementById("nav")
+                .classList
+                .remove("open");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
